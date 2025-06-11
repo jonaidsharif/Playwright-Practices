@@ -4,7 +4,6 @@
 //     // First Test
 //     test('First Test @test-regression', async ({ page }) => {
 //         await page.goto('https://playwright.dev');
-//         await page.goto('https://playwright.dev');
 
 //         // Wait for the page to load completely
 //         await page.waitForLoadState('networkidle');
