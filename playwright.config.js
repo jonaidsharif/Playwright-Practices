@@ -65,16 +65,52 @@
 
 
 
+// const { PlaywrightTestConfig } = require('@playwright/test');
+
+// const config = {
+//   retries: 0,
+//   timeout: 60000,
+//   use: {
+//     headless: false,
+//     viewport: { width: 1280, height: 720 },
+//     video: "off",
+//     screenshot: "only-on-failure"
+//   },
+
+//   projects: [
+//     {
+//       name: 'Chrome',
+//       use: { browserName: 'chromium' }
+//     },
+//     {
+//       name: 'Firefox',
+//       use: { browserName: 'firefox' }
+//     },
+//     {
+//       name: 'Webkit',
+//       use: { browserName: 'webkit' }
+//     },
+//   ]
+// };
+
+
+// module.exports = config;
+
+
+// Setting - Up Base - Url
+
+
 const { PlaywrightTestConfig } = require('@playwright/test');
 
 const config = {
-  retries: 1,
+  retries: 0,
   timeout: 60000,
   use: {
+    baseURL: "https://the-internet.herokuapp.com",
     headless: false,
     viewport: { width: 1280, height: 720 },
-    video: "on-first-retry",
-    screenshot: "off"
+    video: "off",
+    screenshot: "only-on-failure"
   },
 
   projects: [
