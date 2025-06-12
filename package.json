@@ -4,7 +4,10 @@
   "description": "playwright, project related working",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:chrome": "npx playwright test --config=playwright.config.js --project=Chrome",
+    "test:firebox": "npx playwright test --config=playwright.config.js --project=Firebox",
+    "test:webkit": "npx playwright test --config=playwright.config.js --project=Webkit"
   },
   "author": "",
   "license": "ISC",
@@ -12,3 +15,4 @@
     "@playwright/test": "^1.53.0"
   }
 }
+
