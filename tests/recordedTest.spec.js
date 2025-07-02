@@ -1,0 +1,34 @@
+const { test, expect } = require('@playwright/test');
+
+test('test', async ({ page }) => {
+    await page.goto('https://demoqa.com/');
+    await page.getByRole('list').getByText('Text Box').click();
+    await page.getByRole('textbox', { name: 'Full Name' }).click();
+    await page.getByRole('textbox', { name: 'Full Name' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Full Name' }).fill('J');
+    await page.getByRole('textbox', { name: 'Full Name' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Full Name' }).fill('Jonaid ');
+    await page.getByRole('textbox', { name: 'Full Name' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Full Name' }).fill('Jonaid B');
+    await page.getByRole('textbox', { name: 'Full Name' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Full Name' }).fill('Jonaid Bin ');
+    await page.getByRole('textbox', { name: 'Full Name' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Full Name' }).fill('Jonaid Bin SH');
+    await page.getByRole('textbox', { name: 'Full Name' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Full Name' }).fill('Jonaid Bin Sharif');
+    await page.getByRole('textbox', { name: 'Full Name' }).press('Enter');
+    await page.getByRole('textbox', { name: 'name@example.com' }).click();
+    await page.getByRole('textbox', { name: 'name@example.com' }).fill('test');
+    await page.getByRole('textbox', { name: 'name@example.com' }).press('Enter');
+    await page.getByRole('textbox', { name: 'Current Address' }).click();
+    await page.getByRole('textbox', { name: 'Current Address' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Current Address' }).fill('K');
+    await page.getByRole('textbox', { name: 'Current Address' }).press('CapsLock');
+    await page.getByRole('textbox', { name: 'Current Address' }).fill('Karnafu;lly\n');
+    await page.locator('#permanentAddress').click();
+    await page.locator('#permanentAddress').press('CapsLock');
+    await page.locator('#permanentAddress').fill('B');
+    await page.locator('#permanentAddress').press('CapsLock');
+    await page.locator('#permanentAddress').fill('Bangladesh\n');
+    await page.getByText('Text BoxFull NameEmailCurrent').click();
+});

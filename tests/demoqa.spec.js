@@ -17,7 +17,7 @@
 //         const permanentAddress = page.locator('#permanentAddress');
 
 //         await expect(name).toBeVisible();
-//         await expect(name).toHaveText('Name:Test Username') 
+//         await expect(name).toHaveText('Name:Test Username')
 //         await expect(email).toBeVisible();
 //         await expect(email).toHaveText('Email:test@email.com')
 //         await expect(currentAddress).toBeVisible();
@@ -27,11 +27,15 @@
 //     });
 // });
 
+const { test, expect } = require('@playwright/test');
 
 test.describe("Examples", () => {
     test("Testing Assertions", async ({ page }) => {
-        await page.goto('https://demoqa.com/text-box');
+        await page.goto("https://demoqa.com/text-box");
         await expect(page).toHaveTitle("ToolsQA");
         await expect(page).toHaveURL("https://demoqa.com/text-box");
+
+        const test = page.locator('#currentAddress');
+        expect(test).toContainText();
     });
-});
+}); 
